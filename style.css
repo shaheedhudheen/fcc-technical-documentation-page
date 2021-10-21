@@ -2,8 +2,6 @@
 *::before,
 *::after{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body{
@@ -11,50 +9,65 @@ body{
     line-height: 1.5;
 }
 
-.container{
-    margin: 2em;
+@media (max-width: 460px){
+    body{
+        font-size: 10px;
+    }
 }
 
-.nav-links{
-    list-style: none;
-}
-
-.nav-link{
-    color: black;
-    font-size: 1.5rem;
-}
-
-a{
+a {
     text-decoration: none;
 }
 
-#navbar{
+.navbar li{
+    list-style: none;
+    color: #4d4e53;
+    border-top:1px solid;
+    border-color: black;
+    position: relative;
+    width: 100%;
+}
+
+
+.navbar{
     position: fixed;
-    top: 0;
     left: 0;
+    top: 0;
+    width: 300px;
+    min-width: 290px;
     height: 100%;
-    max-width: 290px;
     border-right: solid;
-    border-color: #000;
+    border-color: grey;
+}
+
+.navbar ul{
+    height: 88%;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden ;
+}
+
+.navbar a{
+    display: block;
+    padding: .6em 2em;
+    font-size: 1.25rem;
+    color: black;
 }
 
 header{
-    font-size: 1.25rem;
-    font-weight: 500;
-    margin: 1.5em;
+    margin: 1em;
     text-align: center;
+    font-size: 1.2rem;
 }
 
-#navbar li {
-  color: #4d4e53;
-  border-bottom: 2px solid;
-  list-style: none;
-  position: relative;
-  width: 100%;
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
 }
 
-#navbar a{
-    cursor: pointer;
-    display: block;
+#main-doc header{
+    text-align: left;
+    margin: 0;
 }
-
